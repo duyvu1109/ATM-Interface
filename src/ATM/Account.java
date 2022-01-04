@@ -13,8 +13,6 @@ public class Account {
         // get new account UUID
         this.uuid = bank.getNewAccountUUID();
         this.transactions = new ArrayList<Transaction>();
-        holder.addAccount(this);
-        bank. addAccount(this);
     }
     public String getUUID() {
         return this.uuid;

@@ -7,4 +7,15 @@ public class Transaction {
     private Date timeStamp;
     private String memo;
     private Account inAccount;
+    public Transaction(double amount, Account inAccount) {
+        this.amount = amount;
+        this.memo = "";
+        this.inAccount = inAccount;
+        this.timeStamp = new Date();
+    }
+    public Transaction(double amount, String memo, Account inAccount) {
+        this(amount, inAccount);
+        this.memo = memo;
+        // this.timeStamp = new Date();
+    }
 }
