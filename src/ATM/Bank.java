@@ -12,4 +12,7 @@ public class Bank {
     public String getNewAccountUUID() {
         return "";
     }
+    public void addAccount(Account acc) {
+        this.accounts.add(acc);
+    }
 }

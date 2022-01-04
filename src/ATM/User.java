@@ -7,7 +7,7 @@ import java.security.MessageDigest;
 public class User {
     private String firstName, lastName, uuid;
     private byte pinHash[];
-    private ArrayList<Account> accounts;
+    public ArrayList<Account> accounts;
     public User(String firstName, String lastName, String pin, Bank bank) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,5 +26,8 @@ public class User {
         this.accounts = new ArrayList<Account>();
         // log message
         System.out.printf("New user %s with ID %s created.", this.firstName + " " + this.lastName, this.uuid);
+    }
+    public void addAccount(Account acc) {
+        this.accounts.add(acc);
     }
 }
