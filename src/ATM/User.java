@@ -7,7 +7,7 @@ import java.security.MessageDigest;
 public class User {
     private String firstName, lastName, uuid;
     private byte pinHash[];
-    public ArrayList<Account> accounts;
+    private ArrayList<Account> accounts;
     public User(String firstName, String lastName, String pin, Bank bank) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -29,5 +29,8 @@ public class User {
     }
     public void addAccount(Account acc) {
         this.accounts.add(acc);
+    }
+    public String getUUID() {
+        return this.uuid;
     }
 }
