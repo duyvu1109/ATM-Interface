@@ -44,4 +44,28 @@ public class User {
         }
         return false;
     }
+    public String getFirstName() {
+        return this.firstName;
+    }
+    public void printAccountSummary() {
+        System.out.printf("\n\n%s's accounts summary\n", this.firstName);
+        for (int i = 0; i < this.accounts.size(); i++) {
+            System.out.printf("%d. %s\n", i+1, this.accounts.get(i).getSummaryLine());
+        }
+    }
+    public int numAccounts() {
+        return this.accounts.size();
+    }
+    public void printAccountTransactionHistory(int indexOfAccount) {
+        this.accounts.get(indexOfAccount).printTransactionHistory();
+    }
+    public double getAccBalance(int indexOfAccount) {
+        return this.accounts.get(indexOfAccount).getBalance();
+    }
+    public String getAccUUID(int indexOfAccount) {
+        return this.accounts.get(indexOfAccount).getUUID();
+    }
+    public void addAccountTransaction(int indexOfAccount, double amount, String memo) {
+        this.accounts.get(indexOfAccount).addTransaction(amount, memo);
+    }
 }

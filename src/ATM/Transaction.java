@@ -18,4 +18,14 @@ public class Transaction {
         this.memo = memo;
         // this.timeStamp = new Date();
     }
+    public double getAmount() {
+        return this.amount;
+    }
+    public String getSummaryLine() {
+        if (this.amount >= 0) {
+            return String.format("%s : $%.02f : %s", this.timeStamp.toString(), this.amount, this.memo);
+        } else {
+            return String.format("%s : $(%.02f) : %s", this.timeStamp.toString(), -this.amount, this.memo);
+        }
+    }
 }

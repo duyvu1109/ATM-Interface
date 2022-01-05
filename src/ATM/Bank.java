@@ -73,4 +73,7 @@ public class Bank {
         }
         return null;
     }
+    public String getName() {
+        return this.name;
+    }
 }
